@@ -1,5 +1,9 @@
 # microwakeword
 
+[![CI](https://github.com/zserge/microwakeword/actions/workflows/ci.yml/badge.svg)](https://github.com/zserge/microwakeword/actions/workflows/ci.yml)
+[![GoDoc](https://pkg.go.dev/badge/github.com/zserge/microwakeword.svg)](https://pkg.go.dev/github.com/zserge/microwakeword)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zserge/microwakeword)](https://goreportcard.com/report/github.com/zserge/microwakeword)
+
 Pure Go streaming wake-word detection using
 [microWakeWord](https://github.com/kahrendt/microWakeWord) v2 TFLite models.
 No CGo, no external C/C++ dependencies.
@@ -105,6 +109,8 @@ Tests are skipped automatically if the files are not present.
 ```
 go test -bench=. -benchmem
 ```
+
+On Mac M1 it's 50x faster than real-time (20ms to process 1s of audio).
 
 ## Project structure
 
